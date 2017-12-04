@@ -1,0 +1,45 @@
+{
+  "name": "express-webpack",
+  "version": "1.0.0",
+  "description": "A template for Express with Webpack and Browsersync",
+  "author": "Cesar Denis <cesar@cesardenis.com>",
+  "homepage": "https://github.com/CesarDenis/express-webpack#readme",
+  "keywords": [
+    "node",
+    "express",
+    "webpack",
+    "browsersync"
+  ],
+  "main": "src/index.js",
+  "files": [
+    "resources",
+    "src"
+  ],
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "lint": "eslint src/**/*.js",
+    "start": "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CesarDenis/express-gulp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CesarDenis/express-gulp/issues"
+  },
+  "dependencies": {
+    "bootstrap": "4.0.0-beta.2",
+    "express": "4.16.2",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.9",
+    "pug": "2.0.0-rc.4",
+    "winston": "2.4.0"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "eslint": "4.11.0",
+    "nodemon": "1.12.1"
+  },
+  "license": "MIT"
+}
