@@ -1,0 +1,13 @@
+{
+  "entry": {
+    "main": [
+      "./scripts/main.js",
+      "./styles/main.scss"
+    ]
+  },
+  "publicPath": "/",
+  "cacheBusting": "[name]_[hash:8]",
+  "watch": [
+    "src/views/**/*.pug"
+  ]
+}
