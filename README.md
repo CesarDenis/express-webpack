@@ -31,6 +31,8 @@ Linting code                             | `npm run lint`
 
 [Cesar Denis](https://twitter.com/CesarDenis)
 
+[Roberto Achar](https://twitter.com/roberoachar)
+
 ## License
 
 [MIT](https://github.com/CesarDenis/express-webpack/blob/master/LICENSE)

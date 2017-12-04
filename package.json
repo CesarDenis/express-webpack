@@ -2,7 +2,10 @@
   "name": "express-webpack",
   "version": "1.0.0",
   "description": "A template for Express with Webpack and Browsersync",
-  "author": "Cesar Denis <cesar@cesardenis.com>",
+  "contributors": [
+    "Cesar Denis <cesar@cesardenis.com> (http://github.com/cesardenis)",
+    "Roberto Achar <robertoachar@gmail.com> (http://github.com/robertoachar)"
+  ],
   "homepage": "https://github.com/CesarDenis/express-webpack#readme",
   "keywords": [
     "node",
