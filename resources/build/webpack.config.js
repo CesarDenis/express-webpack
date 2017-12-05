@@ -71,6 +71,25 @@ let webpackConfig = {
             { loader: 'sass', options: { sourceMap: config.enabled.sourceMaps } }
           ]
         })
+      },
+      {
+        test: /\.(ttf|eot|woff2?|png|jpe?g|gif|svg|ico)$/,
+        include: config.paths.assets,
+        loader: 'url',
+        options: {
+          limit: 4096,
+          name: `[path]${assetsFilenames}.[ext]`
+        }
+      },
+      {
+        test: /\.(ttf|eot|woff2?|png|jpe?g|gif|svg|ico)$/,
+        include: /node_modules/,
+        loader: 'url',
+        options: {
+          limit: 4096,
+          outputPath: 'vendor/',
+          name: `${config.cacheBusting}.[ext]`
+        }
       }
     ]
   },
