@@ -2,6 +2,7 @@
 
 const webpack = require('webpack');
 const merge = require('webpack-merge');
+const CleanPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
@@ -103,6 +104,10 @@ let webpackConfig = {
     moduleExtensions: ['-loader']
   },
   plugins: [
+    new CleanPlugin([config.paths.dist], {
+      root: config.paths.root,
+      verbose: false,
+    }),
     new ExtractTextPlugin({
       filename: `styles/${assetsFilenames}.css`,
       allChunks: true,
