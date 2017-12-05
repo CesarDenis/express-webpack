@@ -124,6 +124,12 @@ let webpackConfig = {
       allChunks: true,
       disable: (config.enabled.watcher)
     }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      Popper: 'popper.js/dist/umd/popper.js'
+    }),
     new FriendlyErrorsWebpackPlugin()
   ]
 };
