@@ -3,6 +3,7 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 const config = require('./config');
 
@@ -87,7 +88,8 @@ let webpackConfig = {
       filename: `styles/${assetsFilenames}.css`,
       allChunks: true,
       disable: (config.enabled.watcher)
-    })
+    }),
+    new FriendlyErrorsWebpackPlugin()
   ]
 };
 
