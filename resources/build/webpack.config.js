@@ -13,7 +13,7 @@ let webpackConfig = {
   output: {
     path: config.paths.dist,
     publicPath: config.publicPath,
-    filename: `scripts/${assetsFilenames}.js`,
+    filename: `scripts/${assetsFilenames}.js`
   },
   stats: {
     hash: false,
@@ -27,7 +27,7 @@ let webpackConfig = {
     modules: false,
     reasons: false,
     source: false,
-    publicPath: false,
+    publicPath: false
   },
   module: {
     rules: [
@@ -42,12 +42,12 @@ let webpackConfig = {
         exclude: [/(node_modules|bower_components)(?![/|\\](bootstrap|foundation-sites))/],
         use: [
           { loader: 'babel' },
-        ],
+        ]
       }
     ]
   },
   resolveLoader: {
-    moduleExtensions: ['-loader'],
+    moduleExtensions: ['-loader']
   }
 };
 
