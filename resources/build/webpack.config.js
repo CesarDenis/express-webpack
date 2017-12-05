@@ -139,6 +139,30 @@ let webpackConfig = {
   ]
 };
 
+/* eslint-disable global-require */ /** Let's only load dependencies as needed */
+
+if (config.enabled.optimize) {
+  webpackConfig = merge(webpackConfig, require('./webpack.config.optimize'));
+}
+
+if (config.env.production) {
+  webpackConfig.plugins.push(new webpack.NoEmitOnErrorsPlugin());
+}
+
+if (config.enabled.cacheBusting) {
+  const WebpackAssetsManifest = require('webpack-assets-manifest');
+
+  webpackConfig.plugins.push(
+    new WebpackAssetsManifest({
+      output: 'assets.json',
+      space: 2,
+      writeToDisk: false,
+      assets: config.manifest,
+      replacer: require('./util/assetManifestsFormatter'),
+    })
+  );
+}
+
 if (config.enabled.watcher) {
   webpackConfig.entry = require('./util/addHotMiddleware')(webpackConfig.entry);
   webpackConfig = merge(webpackConfig, require('./webpack.config.watch'));

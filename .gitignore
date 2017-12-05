@@ -62,11 +62,7 @@ typings/
 .env
 
 # Compiled output
-/src/public/fonts
-/src/public/images
-/src/public/scripts
-/src/public/styles
-/src/public/vendor
+/src/public
 
 ### macOS ###
 *.DS_Store
