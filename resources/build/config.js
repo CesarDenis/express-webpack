@@ -11,6 +11,7 @@ const userConfig = desire(`${__dirname}/../config`);
 
 const config = merge({
   open: true,
+  copy: 'images/**/*',
   proxyUrl: 'http://localhost:3000',
   cacheBusting: '[name]_[hash]',
   paths: {
