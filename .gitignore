@@ -48,6 +48,10 @@ typings/
 # Optional REPL history
 .node_repl_history
 
+# Cache loader directory
+.cache-loader
+
+
 # Output of 'npm pack'
 *.tgz
 
