@@ -10,6 +10,8 @@ const isProduction = !!((argv.env && argv.env.production) || argv.p);
 const userConfig = desire(`${__dirname}/../config`);
 
 const config = merge({
+  proxyUrl: 'http://localhost:3000',
+  cacheBusting: '[name]_[hash]',
   paths: {
     root: rootPath,
     assets: path.join(rootPath, 'resources/assets'),

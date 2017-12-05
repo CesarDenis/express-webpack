@@ -1,4 +1,6 @@
-@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+/** Import everything from autoload */
+@import "./autoload/**/*";
 
 .browserupgrade {
   margin: 0.2em 0;
