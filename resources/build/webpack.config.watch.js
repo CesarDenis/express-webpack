@@ -30,6 +30,6 @@ module.exports = {
       proxyUrl: config.proxyUrl,
       watch: config.watch,
       delay: 500,
-    }),
+    })
   ],
 };

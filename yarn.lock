@@ -2551,6 +2551,13 @@ expand-range@^1.8.1:
   dependencies:
     fill-range "^2.1.0"
 
+express-manifest@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/express-manifest/-/express-manifest-0.1.1.tgz#eb9a4888e7ed2ce6fe348293a217afb2742a4713"
+  dependencies:
+    express "^4.8.0"
+    lodash "^3.6.0"
+
 express@2.5.x:
   version "2.5.11"
   resolved "https://registry.yarnpkg.com/express/-/express-2.5.11.tgz#4ce8ea1f3635e69e49f0ebb497b6a4b0a51ce6f0"
