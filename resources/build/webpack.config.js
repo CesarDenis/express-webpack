@@ -51,7 +51,7 @@ let webpackConfig = {
       },
       {
         test: /\.js$/,
-        exclude: [/(node_modules|bower_components)(?![/|\\](bootstrap|foundation-sites))/],
+        exclude: [/node_modules(?![/|\\](bootstrap|foundation-sites))/],
         use: [
           { loader: 'babel' }
         ]
