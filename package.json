@@ -22,10 +22,10 @@
     "build": "webpack --progress --config resources/build/webpack.config.js",
     "build:production": "webpack --progress -p --config resources/build/webpack.config.js",
     "build:profile": "webpack --progress --profile --json --config resources/build/webpack.config.js",
-    "dev": "nodemon src/server.js",
+    "dev": "concurrently -k -n \"nodemon,webpack\" -c \"bgGreen,bgBlue\" \"nodemon src/server.js\" \"npm run watch\"",
     "lint": "eslint src/**/*.js",
     "start": "npm run dev",
-    "webpack": "webpack --hide-modules --watch --config resources/build/webpack.config.js"
+    "watch": "webpack --hide-modules --watch --config resources/build/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "bootstrap": "4.0.0-beta.2",
+    "dotenv": "4.0.0",
     "express": "^4.16.2",
     "express-manifest": "^0.1.1",
     "jquery": "^3.2.1",
@@ -52,6 +53,7 @@
     "browsersync-webpack-plugin": "0.6.0",
     "cache-loader": "^1.2.0",
     "clean-webpack-plugin": "^0.1.17",
+    "concurrently": "3.5.1",
     "copy-globs-webpack-plugin": "^0.2.0",
     "css-loader": "^0.28.7",
     "cssnano": "^3.10.0",

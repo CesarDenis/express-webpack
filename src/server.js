@@ -2,6 +2,9 @@ const winston = require('winston');
 
 const app = require('./app');
 
-app.listen(3000, () => {
-  winston.info('Express: 3000');
+require('dotenv').config();
+const port = process.env.Port || 3000;
+
+app.listen(port, () => {
+  winston.info(`App listening on port ${port}`);
 });
