@@ -131,6 +131,24 @@ let webpackConfig = {
       'window.jQuery': 'jquery',
       Popper: 'popper.js/dist/umd/popper.js'
     }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: config.enabled.optimize,
+      debug: config.enabled.watcher,
+      stats: { colors: true },
+    }),
+    new webpack.LoaderOptionsPlugin({
+      test: /\.s?css$/,
+      options: {
+        output: { path: config.paths.dist },
+        context: config.paths.assets,
+      },
+    }),
+    new webpack.LoaderOptionsPlugin({
+      test: /\.js$/,
+      options: {
+        eslint: { failOnWarning: false, failOnError: true },
+      },
+    }),
     new StyleLintPlugin({
       failOnError: !config.enabled.watcher,
       syntax: 'scss'
