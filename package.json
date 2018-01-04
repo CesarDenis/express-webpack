@@ -23,6 +23,7 @@
     "build:production": "webpack --progress -p --config resources/build/webpack.config.js",
     "build:profile": "webpack --progress --profile --json --config resources/build/webpack.config.js",
     "dev": "nodemon src/index.js",
+    "dev": "nodemon src/server.js",
     "lint": "eslint src/**/*.js",
     "start": "npm run dev",
     "webpack": "webpack --hide-modules --watch --config resources/build/webpack.config.js"
@@ -49,6 +50,7 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.18.13",
+    "browsersync-webpack-plugin": "0.6.0",
     "cache-loader": "^1.2.0",
     "clean-webpack-plugin": "^0.1.17",
     "copy-globs-webpack-plugin": "^0.2.0",
@@ -75,6 +77,8 @@
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
     "webpack-assets-manifest": "^1.0.0",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-hot-middleware": "^2.21.0",
     "webpack-merge": "^4.1.1",
     "yargs": "^10.0.3"
   },
