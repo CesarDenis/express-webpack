@@ -22,7 +22,6 @@
     "build": "webpack --progress --config resources/build/webpack.config.js",
     "build:production": "webpack --progress -p --config resources/build/webpack.config.js",
     "build:profile": "webpack --progress --profile --json --config resources/build/webpack.config.js",
-    "dev": "nodemon src/index.js",
     "dev": "nodemon src/server.js",
     "lint": "eslint src/**/*.js",
     "start": "npm run dev",
